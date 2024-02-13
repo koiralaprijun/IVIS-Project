@@ -1,0 +1,6 @@
+.choropleth-map {
+  flex: 7; /* 60% width */
+  height: 60vh;
+  border: 1px solid white;
+  border-radius: 5px;
+}

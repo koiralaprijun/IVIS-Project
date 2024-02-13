@@ -1,0 +1,44 @@
+/* File: Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  margin-top: 40px;
+  background-color: #151515;
+}
+.left-navbar {
+  display: flex;
+  width: 40%;
+  justify-content: flex-start;
+}
+
+.logo {
+  margin-right: 50px;
+}
+
+.logo,
+.menu {
+  display: flex;
+  align-items: center;
+  color: rgb(226, 226, 226);
+}
+
+.logo {
+  font-size: 36px;
+}
+
+.menu-item {
+  margin-right: 20px;
+}
+
+.search-form {
+  display: flex;
+  width: 60%;
+  justify-content: flex-end;
+}
+
+.search-form input,
+.search-form select {
+  margin-left: 10px;
+}

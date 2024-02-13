@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+  max-width: 85%;
+  margin: 0 auto; /* This will center your app on the page */
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}

@@ -1,6 +1,8 @@
 .choropleth-map {
-  flex: 7; /* 60% width */
-  height: 60vh;
-  border: 1px solid white;
-  border-radius: 5px;
+  width: 100%;
+  position: relative; /* Needed for absolute positioning of children */
+  height: 80vh; /* Adjust to your need */
+  /* Add padding or margins if necessary, for example: */
+  padding-right: 320px; /* Make space for the overlay */
+  overflow: hidden;
 }

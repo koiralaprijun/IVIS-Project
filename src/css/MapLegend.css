@@ -1,0 +1,40 @@
+.legend {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.legend h4 {
+  text-align: center;
+}
+
+.legend-category {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.legend-label {
+  font-size: 14px;
+}
+
+.map-legend {
+  position: absolute;
+  left: 60px;
+  bottom: 90px;
+  background: rgba(46, 46, 46, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 10; /* Ensure it sits above the map */
+}

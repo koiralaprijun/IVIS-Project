@@ -1,8 +1,16 @@
-.choropleth-map {
-  width: 100%;
-  position: relative; /* Needed for absolute positioning of children */
-  height: 80vh; /* Adjust to your need */
-  /* Add padding or margins if necessary, for example: */
-  padding-right: 320px; /* Make space for the overlay */
-  overflow: hidden;
+.left-container {
+  display: flex;
+  width: 76%;
+}
+
+/* Hover Interaction - POPUP */
+
+.map-value-popup {
+  background-color: rgb(44, 83, 167);
+  color: rgb(44, 83, 167);
+  border: 1px solid rgb(44, 83, 167);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 200px;
 }

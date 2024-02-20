@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from "react"
-import MapLegend from "./MapLegend"
 import mapboxgl from "mapbox-gl" // Import mapboxgl
-import OverlayContainer from "./OverlayContainer"
+import { geoJSON } from "./StockholmData"
 
 const ChoroplethMap = () => {
   const mapContainer = useRef(null)
@@ -16,34 +15,95 @@ const ChoroplethMap = () => {
       zoom: 12,
     })
 
+    // Add navigation control (zoom buttons)
+    map.addControl(new mapboxgl.NavigationControl(), "top-right")
+
     map.on("load", () => {
-      map.addSource("earthquakes", {
+      // Add the air quality GeoJSON data as a source
+      map.addSource("airQuality", {
         type: "geojson",
-        // Use a URL for the value for the `data` property.
-        data: "https://docs.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson",
+        data: geoJSON, // Use your GeoJSON data
       })
 
+      // Add a layer to display air quality measurements
       map.addLayer({
-        id: "earthquakes-layer",
-        type: "circle",
-        source: "earthquakes",
+        id: "airQuality-layer",
+        type: "heatmap",
+        source: "airQuality",
         paint: {
-          "circle-radius": 4,
-          "circle-stroke-width": 2,
-          "circle-color": "red",
-          "circle-stroke-color": "white",
+          // Use a property such as measurements_value to determine the circle color
+          // Here you might want to create a color scale based on air quality values
+          "circle-color": [
+            "interpolate",
+            ["linear"],
+            ["get", "measurements_value"],
+            0,
+            "#2DC4B2",
+            50,
+            "#3BB3C3",
+            100,
+            "#669EC4",
+            150,
+            "#8B88B6",
+            200,
+            "#A2719B",
+            300,
+            "#AA5E79",
+          ],
+          "circle-radius": 8,
+          "circle-stroke-width": 1,
+          "circle-stroke-color": "#ffffff",
         },
       })
+    })
+
+    const popup = new mapboxgl.Popup({
+      closeButton: false,
+      closeOnClick: false,
+      className: "map-value-popup",
+    })
+
+    // Hover interaction
+    map.on("mouseenter", "airQuality-layer", (e) => {
+      map.getCanvas().style.cursor = "pointer"
+
+      const properties = e.features[0].properties
+      const coordinates = e.features[0].geometry.coordinates.slice()
+      let htmlContent = "<div>"
+
+      // Iterate over properties to construct HTML content
+      Object.entries(properties).forEach(([key, value]) => {
+        if (
+          key === "measurements_parameter" &&
+          ["PM10", "PM2.5", "NO2", "O3"].includes(value)
+        ) {
+          htmlContent += `<b>${value}: </b>${properties.measurements_value}<br>`
+        }
+      })
+
+      htmlContent += "</div>"
+
+      // Ensure that if the map is zoomed out such that multiple
+      // copies of the feature are visible, the popup appears
+      // over the copy being pointed to.
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360
+      }
+
+      // Populate the popup and set its coordinates
+      // based on the feature found.
+      popup.setLngLat(coordinates).setHTML(htmlContent).addTo(map)
+    })
+
+    map.on("mouseleave", "airQuality-layer", () => {
+      map.getCanvas().style.cursor = ""
+      popup.remove()
     })
 
     return () => map.remove()
   }, [])
 
-  return (
-    <div className="choropleth-map" ref={mapContainer}>
-      <OverlayContainer />
-    </div>
-  )
+  return <div className="left-container" ref={mapContainer}></div>
 }
 
 export default ChoroplethMap

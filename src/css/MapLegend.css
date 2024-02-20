@@ -1,21 +1,27 @@
-.legend {
+.map-legend {
   position: absolute;
-  left: 20px;
-  bottom: 20px;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 10px;
+  left: 80px;
+  bottom: 150px;
+  background: rgb(44, 83, 167, 0.8);
+  padding: 10px 0px;
   border-radius: 8px;
+  z-index: 10; /* Ensure it sits above the map */
 }
 
-.legend h4 {
+.legend-title {
   text-align: center;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid white;
 }
 
 .legend-category {
   display: flex;
   align-items: center;
+  margin-top: 10px;
   margin-bottom: 4px;
+  padding: 0 10px;
 }
 
 .legend-color {
@@ -27,14 +33,5 @@
 
 .legend-label {
   font-size: 14px;
-}
-
-.map-legend {
-  position: absolute;
-  left: 60px;
-  bottom: 90px;
-  background: rgba(46, 46, 46, 0.8);
-  padding: 10px;
-  border-radius: 8px;
-  z-index: 10; /* Ensure it sits above the map */
+  font-weight: bold;
 }

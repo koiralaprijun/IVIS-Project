@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react"
 import * as d3 from "d3"
 import "../src/css/Navbar.css"
 
-const Navbar = () => {
+const Navbar = ({ onSearch }) => { // Receive onSearch function as prop
   const rightNavbarRef = useRef()
 
   useEffect(() => {
@@ -15,8 +15,12 @@ const Navbar = () => {
 
     navbarDiv
       .append("button")
-      .text("Search") // Add the button text
+      .text("Search")
       .attr("type", "submit")
+      .on("click", function () {
+        const inputValue = searchInput.node().value // Get the input value
+        onSearch(inputValue) // Call the onSearch function passed as prop
+      })
 
     // Cleanup function
     return () => {
@@ -24,7 +28,7 @@ const Navbar = () => {
       // Also remove the search button when the component unmounts
       navbarDiv.select("button").remove()
     }
-  }, [])
+  }, [onSearch]) // Include onSearch in the dependency array
 
   return (
     <nav className="navbar">
@@ -32,7 +36,7 @@ const Navbar = () => {
         <div className="logo">CitizAir</div>
         <div className="menu">
           <a href="#" className="menu-item">
-            All about Air Pollution
+            About Air Pollution
           </a>
           <a href="#" className="menu-item">
             About Us

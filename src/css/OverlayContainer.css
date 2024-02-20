@@ -1,41 +1,51 @@
-.overlay-container {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 380px;
-  padding: 10px;
-  /* border: 2px solid red; */
-  background-color: rgb(43, 43, 43, 0.8);
+.right-container {
+  display: flex;
+  flex-direction: column;
+  width: 24%;
   border-radius: 8px;
-  z-index: 10;
-  height: auto;
+  border: 15px solid;
+  border-color: rgb(44, 83, 167);
+  background-color: rgb(44, 83, 167);
 }
 
 .info-box {
-  background-color: #00acee;
-  padding: 10px;
+  background-color: white;
+  height: 50%;
+  padding: 10px 30px;
   border-radius: 8px;
   text-align: center;
-  margin-bottom: 10px;
+  color: rgb(44, 83, 167);
+}
+.quality-indicator {
+  display: flex;
+  background-color: #38983b;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 0 10px;
+  margin-top: 20px;
 }
 
 .status-button {
   background-color: #38983b;
   border: none;
   color: white;
-  padding: 10px 24px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
+  font-weight: light;
+  border-right: 1px solid white;
+  padding: 30px 15px 30px;
 }
 
 /* This section is for Progress bar */
 h3 {
   font-size: 24px;
+  color: white;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.indices-container {
+  margin-top: 30px;
 }
 
 .index-name {
@@ -47,7 +57,7 @@ h3 {
 
 .progress-bar-container {
   width: 100%;
-  background-color: #ccc;
+  background-color: rgb(44, 83, 167);
   border-radius: 4px;
   position: relative;
   margin-bottom: 20px;
@@ -55,14 +65,14 @@ h3 {
 
 .progress-bar-full {
   height: 10px;
-  background-color: #67d2ef;
+  background-color: rgb(81, 123, 214);
   border-radius: 4px;
   width: 100%;
 }
 
 .progress-bar-fill {
   height: 10px;
-  background-color: #ffd700;
+  background-color: rgb(20, 44, 95);
   border-radius: 4px;
   position: absolute;
   top: 0;
@@ -103,16 +113,40 @@ h3 {
 
 /* Forecasting Container */
 
+.forecast-section {
+  height: 35%;
+  margin-top: 10px;
+  padding: 20px 0px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.forecast-section h4 {
+  margin-top: 15px;
+  color: rgb(44, 83, 167);
+}
+
 .forecast-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
   gap: 2px;
   overflow-x: auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: 0 50px;
 }
 
 .forecast-square {
   width: 100%;
   min-height: 20px;
+}
+
+.bar-chart {
+  display: flex;
+  border: 1px solid white;
+  margin-top: 10px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  height: 26%;
+  padding: 0px 40px;
 }

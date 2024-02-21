@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/ivis-project-group-5/static/css/main.983ca8a8.chunk.css",
-    "main.js": "/ivis-project-group-5/static/js/main.13e74733.chunk.js",
-    "main.js.map": "/ivis-project-group-5/static/js/main.13e74733.chunk.js.map",
-    "runtime-main.js": "/ivis-project-group-5/static/js/runtime-main.fca8e93a.js",
-    "runtime-main.js.map": "/ivis-project-group-5/static/js/runtime-main.fca8e93a.js.map",
-    "static/js/2.7c418840.chunk.js": "/ivis-project-group-5/static/js/2.7c418840.chunk.js",
-    "static/js/2.7c418840.chunk.js.map": "/ivis-project-group-5/static/js/2.7c418840.chunk.js.map",
-    "static/js/3.35016d19.chunk.js": "/ivis-project-group-5/static/js/3.35016d19.chunk.js",
-    "static/js/3.35016d19.chunk.js.map": "/ivis-project-group-5/static/js/3.35016d19.chunk.js.map",
-    "index.html": "/ivis-project-group-5/index.html",
-    "precache-manifest.4e386fc45ed7a9036500f98927118754.js": "/ivis-project-group-5/precache-manifest.4e386fc45ed7a9036500f98927118754.js",
-    "service-worker.js": "/ivis-project-group-5/service-worker.js",
-    "static/css/main.983ca8a8.chunk.css.map": "/ivis-project-group-5/static/css/main.983ca8a8.chunk.css.map",
-    "static/js/2.7c418840.chunk.js.LICENSE.txt": "/ivis-project-group-5/static/js/2.7c418840.chunk.js.LICENSE.txt"
+    "main.css": "/IVIS-Project/static/css/main.0feeaa54.chunk.css",
+    "main.js": "/IVIS-Project/static/js/main.36bc1475.chunk.js",
+    "main.js.map": "/IVIS-Project/static/js/main.36bc1475.chunk.js.map",
+    "runtime-main.js": "/IVIS-Project/static/js/runtime-main.9ad8ade7.js",
+    "runtime-main.js.map": "/IVIS-Project/static/js/runtime-main.9ad8ade7.js.map",
+    "static/js/2.8a0786ea.chunk.js": "/IVIS-Project/static/js/2.8a0786ea.chunk.js",
+    "static/js/2.8a0786ea.chunk.js.map": "/IVIS-Project/static/js/2.8a0786ea.chunk.js.map",
+    "static/js/3.35016d19.chunk.js": "/IVIS-Project/static/js/3.35016d19.chunk.js",
+    "static/js/3.35016d19.chunk.js.map": "/IVIS-Project/static/js/3.35016d19.chunk.js.map",
+    "index.html": "/IVIS-Project/index.html",
+    "precache-manifest.a3dc177325f912537b5d843bf231d74f.js": "/IVIS-Project/precache-manifest.a3dc177325f912537b5d843bf231d74f.js",
+    "service-worker.js": "/IVIS-Project/service-worker.js",
+    "static/css/main.0feeaa54.chunk.css.map": "/IVIS-Project/static/css/main.0feeaa54.chunk.css.map",
+    "static/js/2.8a0786ea.chunk.js.LICENSE.txt": "/IVIS-Project/static/js/2.8a0786ea.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.fca8e93a.js",
-    "static/js/2.7c418840.chunk.js",
-    "static/css/main.983ca8a8.chunk.css",
-    "static/js/main.13e74733.chunk.js"
+    "static/js/runtime-main.9ad8ade7.js",
+    "static/js/2.8a0786ea.chunk.js",
+    "static/css/main.0feeaa54.chunk.css",
+    "static/js/main.36bc1475.chunk.js"
   ]
 }

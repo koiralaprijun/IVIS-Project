@@ -1,0 +1,28 @@
+.link-card {
+  background-color: #f9f9f9;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 8px;
+}
+.link-card-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #0366d6;
+}
+.link-card-description {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #586069;
+}
+.link-card-link {
+  background-color: #0366d6;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+}
+.link-card-link:hover {
+  background-color: #0056b3;
+}

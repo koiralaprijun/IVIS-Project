@@ -1,0 +1,41 @@
+.faq-container {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.faq-question {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question:first-child .faq-answer {
+  display: block; 
+}
+
+.triangle {
+  background-image: url('/Users/amy/Library/Mobile\ Documents/com\~apple\~CloudDocs/2_Master/DH2321\ Information\ Visualization/Group\ project/public/triangle-r.png ');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active .triangle {
+  transform: rotate(90deg); 
+}
+
+
+
+
+
+
+  
